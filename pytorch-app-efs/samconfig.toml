@@ -1,0 +1,11 @@
+version = 0.1
+[default]
+[default.deploy]
+[default.deploy.parameters]
+stack_name = "pytorch-app-efs"
+s3_bucket = "aws-sam-cli-managed-default-samclisourcebucket-1vczkj3abfc5w"
+s3_prefix = "pytorch-app-efs"
+region = "us-east-1"
+capabilities = "CAPABILITY_IAM"
+parameter_overrides = "SecurityGroupIds=\"sg-ba0404e6\" SubnetID=\"subnet-e39eb2cd\""
+image_repositories = ["HelloWorldFunction=507922848584.dkr.ecr.us-east-1.amazonaws.com/pytorch-app-efs"]
